@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "stylesheet" href = "./bootstrap/css/bootstrap.min.css" />
+    <script src = "./bootstrap/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <meta charset="utf-8"> </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Index Page</title>
+    <style >
+      body {
+        margin : 0;
+        font-family: 'Baloo Bhaina 2', cursive;
+      }
+      .nav-link {
+        color : #b9ba03;
+        font-weight: bold;
+      }
+      .nav-link:hover  {
+        color : black;
+        transition: 1s;
+        color : black;
+      }
+
+      #header {
+        border-radius: 10px;
+        margin-top : 20px;
+        background-color: white;
+        padding-left: 20px;
+      }
+      .title {
+        font-family: 'Anton', sans-serif;
+        font-size: 60px;
+        display: inline;
+        color : #b40101;
+      }
+      .tagline {
+        display: inline;
+        font-size: 15px;
+        color : #5f9e0b;
+        font-family: 'Russo One', sans-serif;
+      }
+
+      #goto-sample {
+        display: none;
+      }
+
+      .box {
+        width: 700px;
+        background-color: #e6ffcd;
+        padding : 30px;
+      }
+
+      .content {
+        align: left;
+      }
+
+      @media only screen and (max-width: 750px) {
+        .box {
+          width: 400px;
+          padding : 20px;
+        }
+      }
+
+      @media only screen and (max-width: 530px) {
+        .title {
+          font-size: 35px;
+        }
+        .tagline {
+          font-size : 13px;
+        }
+        #goto-sample {
+          display: block;
+        }
+      }
+
+      .navbar{
+        border-bottom: 0.2px solid  #808080;
+      }
+
+      .form-item {
+        color : brown;
+      }
+
+      .jumbotron {
+        background-color : #edf1f1;
+      }
+
+      .form-header {
+        font-size: 30px;
+        font-family: 'Russo One', sans-serif;
+        color : #b40101;
+      }
+
+      .form-lable {
+
+      }
+
+      .form-header-caption {
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        border-bottom: 0.2px solid  #808080;
+      }
+
+    </style>
+  </head>
+  <body>
+      <div id = "inner" class = "container inner">
+        <div id = "header" >
+          <p class = "title">
+            Aakraman
+          </p>
+          <p class="tagline">
+            Let's fight Corona together..!!
+          </p>
+        </div>
+
+
+
+        <!-- Jumbotron  -->
+        <div class = "jumbotron" style = "margin-top : 10px">
+          <p class="lead"> This contains information about the website </p>
+        </div>
+
+        <!--  Form to collect Samples  -->
+        <div class="container row">
+        <div id = "take-sample col-8" align = "center" >
+          <form method = "post" class = "form-group box">
+
+
+            <div class="form-group">
+
+              <div class = "form-header">
+                Test Sample
+              </div>
+              <div class = "form-header-caption">
+                Record the voice sample of coughing
+              </div>
+
+               <label for="gender" class = "form-item">Gender </label>
+               <div class="form-check form-check-inline content" style="margin-left: 5px">
+                   <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                   <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Female</label>
+               </div>
+               <div class="form-check form-check-inline content">
+                   <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                   <label class="form-check-label" for="inlineRadio2" style="margin-left: 3px">Male</label>
+               </div>
+               <div class="form-check form-check-inline content">
+                   <input class="form-check-input" type="radio" name="gender" id="gender" value="male">
+                   <label class="form-check-label" for="inlineRadio3" style="margin-left: 3px">Other</label>
+               </div>
+           </div>
+           <div class="form-group">
+               <label for="lungs">Any lung conditions </label>
+               <div class="form-check form-check-inline" style="margin-left: 5px">
+                   <input class="form-check-input" type="radio" name="lungs" id="lungs" value="yes">
+                   <label class="form-check-label" for="inlineRadio1" style="margin-left: 3px">Yes</label>
+               </div>
+               <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="lungs" id="lungs" value="no">
+                   <label class="form-check-label" for="inlineRadio2" style="margin-left: 3px">No</label>
+               </div>
+           </div>
+           <div class="form-group">
+               <select class="scountrypicker" data-live-search="true" id="country" title="Country of origin">
+               </select>
+           </div>
+           <div class="form-group">
+               <select class="form-control" id="age">
+                   <option value="default" selected="selected" disabled>Age Group </option>
+                   <option value="24">18 - 30</option>
+                   <option value="35">31 - 40</option>
+                   <option value="45">41 - 55</option>
+                   <option value="65">Above 55</option>
+               </select>
+           </div>
+           <div class="form-group">
+               <select class="form-control " id="temperature">
+                   <option value="default" selected="selected" disabled>Body Temperature</option>
+                   <option value="no">35°C/95°F - 37.9°C/100°F</option>
+                   <option value="yes">Above 38°C/101°F</option>
+                   <option value="na">I don't know</option>
+               </select>
+           </div>
+           <div class="form-group">
+               <select class="form-control selectpicker" id="weight">
+                   <option value="default" selected="selected" disabled>Weight Range</option>
+                   <option value="45">under 45kg/100lbs</option>
+                   <option value="55">45kg/100lbs - 65kg/143lbs</option>
+                   <option value="75">65kg/143lbs - 85kg/187lbs</option>
+                   <option value="95">85kg/187lbs - 105kg/231lbs</option>
+                   <option value="110">Above</option>
+               </select>
+           </div>
+           <div class="form-group">
+               <select class="form-control" id="height">
+                   <option value="default" selected="selected" disabled>Height Range</option>
+                   <option value="150">less than 150cm/4ft'11in</option>
+                   <option value="163">150cm/4ft'11in -165cm/5ft'5in</option>
+                   <option value="170">165cm/5ft'5in -175cm/5ft'8in</option>
+                   <option value="180">175cm/5ft'8in -185cm/6ft'0in</option>
+                   <option value="190">Above</option>
+               </select>
+           </div>
+
+
+
+          </form>
+        </div>
+        <div class= "col-4">
+          Content of the page
+        </div>
+
+      </div>
+  </body>
+</html>
